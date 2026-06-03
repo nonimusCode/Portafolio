@@ -1,10 +1,9 @@
 "use client"
 
 import { ScrollRevealText } from "@/components/ui/scroll-reveal-text"
+import { useTranslations } from 'next-intl'
 import content from "@/constants/content.json"
 import { useEffect, useRef, useState } from "react"
-
-const { about } = content
 
 interface StatCardProps {
   value: string
@@ -22,43 +21,27 @@ function StatCard({ value, label, delay }: StatCardProps) {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true) },
       { threshold: 0.3 }
     )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
+    if (ref.current) observer.observe(ref.current)
     return () => observer.disconnect()
   }, [])
 
   useEffect(() => {
     if (!isVisible) return
-
     const timeout = setTimeout(() => {
       const duration = 1500
       const steps = 30
       const increment = numericValue / steps
       let current = 0
-
       const interval = setInterval(() => {
         current += increment
-        if (current >= numericValue) {
-          setCount(numericValue)
-          clearInterval(interval)
-        } else {
-          setCount(Math.floor(current))
-        }
+        if (current >= numericValue) { setCount(numericValue); clearInterval(interval) }
+        else setCount(Math.floor(current))
       }, duration / steps)
-
       return () => clearInterval(interval)
     }, delay)
-
     return () => clearTimeout(timeout)
   }, [isVisible, numericValue, delay])
 
@@ -68,8 +51,7 @@ function StatCard({ value, label, delay }: StatCardProps) {
       className="flex flex-col border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.02)] p-5 transition-all duration-300 hover:border-[rgba(255,255,255,0.25)] hover:bg-[rgba(255,255,255,0.04)] sm:p-7"
     >
       <span className="font-sans text-[clamp(2.5rem,12vw,3.5rem)] font-extrabold leading-none text-white sm:text-[56px]">
-        {count}
-        {suffix}
+        {count}{suffix}
       </span>
       <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-[rgba(255,255,255,0.38)] mt-2">
         {label}
@@ -82,47 +64,36 @@ const ABOUT_TITLE_PASTEL = { r: 168, g: 200, b: 240 } as const
 const ABOUT_TITLE_MUTED = "rgba(168, 200, 240, 0.22)"
 
 export function AboutSection() {
+  const t = useTranslations('about')
+  const headlineWords = [t('headline0'), t('headline1'), t('headline2')]
+  const statLabels = [t('stat0Label'), t('stat1Label'), t('stat2Label'), t('stat3Label')]
+  const stats = content.about.stats.map((stat, i) => ({ ...stat, label: statLabels[i] }))
+
   return (
     <section id="about" className="section-y section-x bg-black">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-12 lg:flex-row lg:gap-16">
           <div className="lg:w-[60%]">
             <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-[rgba(255,255,255,0.38)] sm:text-[11px] sm:tracking-[0.3em]">
-              {about.label}
+              {t('label')}
             </span>
-
             <div className="mt-5 mb-6 space-y-0 leading-[0.95] sm:mt-6 sm:mb-8">
-              {about.headlineWords.map((word, index) => (
-                <div
-                  key={index}
-                  className="font-sans text-[clamp(2rem,9vw,4.5rem)] font-extrabold uppercase sm:text-[clamp(48px,8vw,72px)]"
-                >
-                  <ScrollRevealText
-                    className="block"
-                    as="span"
-                    fromMuted={ABOUT_TITLE_MUTED}
-                    toRgb={ABOUT_TITLE_PASTEL}
-                  >
+              {headlineWords.map((word, index) => (
+                <div key={index} className="font-sans text-[clamp(2rem,9vw,4.5rem)] font-extrabold uppercase sm:text-[clamp(48px,8vw,72px)]">
+                  <ScrollRevealText className="block" as="span" fromMuted={ABOUT_TITLE_MUTED} toRgb={ABOUT_TITLE_PASTEL}>
                     {word}
                   </ScrollRevealText>
                 </div>
               ))}
             </div>
-
             <p className="max-w-[480px] font-mono text-[12px] leading-[1.75] text-[rgba(255,255,255,0.45)] sm:text-[13px] sm:leading-[1.8]">
-              {about.body}
+              {t('body')}
             </p>
           </div>
-
           <div className="lg:w-[40%]">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {about.stats.map((stat) => (
-                <StatCard
-                  key={stat.label}
-                  value={stat.value}
-                  label={stat.label}
-                  delay={stat.delay}
-                />
+              {stats.map((stat) => (
+                <StatCard key={stat.label} value={stat.value} label={stat.label} delay={stat.delay} />
               ))}
             </div>
           </div>

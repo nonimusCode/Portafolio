@@ -1,22 +1,12 @@
 "use client"
 
 import { ScrollRevealText } from "@/components/ui/scroll-reveal-text"
+import { useTranslations } from 'next-intl'
 import content from "@/constants/content.json"
 import type { ReactNode } from "react"
 
-const { ai } = content
-
 const capabilityIcons: Record<string, ReactNode> = {
-  rag: (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-7 w-7">
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
-      />
-    </svg>
-  ),
-  agents: (
+  automation: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-7 w-7">
       <path
         strokeLinecap="round"
@@ -25,7 +15,7 @@ const capabilityIcons: Record<string, ReactNode> = {
       />
     </svg>
   ),
-  mcp: (
+  chatbots: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-7 w-7">
       <path
         strokeLinecap="round"
@@ -34,7 +24,16 @@ const capabilityIcons: Record<string, ReactNode> = {
       />
     </svg>
   ),
-  llmops: (
+  "aws-ai": (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-7 w-7">
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
+      />
+    </svg>
+  ),
+  tooling: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-7 w-7">
       <path
         strokeLinecap="round"
@@ -46,16 +45,23 @@ const capabilityIcons: Record<string, ReactNode> = {
 }
 
 export function AISection() {
+  const t = useTranslations('ai')
+  const capabilities = content.ai.capabilities.map((cap, i) => ({
+    id: cap.id,
+    title: t(`cap${i}Title`),
+    description: t(`cap${i}Description`),
+  }))
+
   return (
     <section id="ai" className="section-y section-x bg-black">
       <div className="mx-auto max-w-7xl">
         <span className="block font-mono text-[10px] uppercase tracking-[0.28em] text-[rgba(255,255,255,0.38)] sm:text-[11px] sm:tracking-[0.3em]">
-          {ai.label}
+          {t('label')}
         </span>
 
         <h2 className="mb-10 mt-5 font-sans text-[clamp(1.75rem,6.5vw,3.5rem)] font-extrabold uppercase leading-[1.05] tracking-[-0.02em] sm:mb-16 sm:mt-6 sm:leading-none">
-          {ai.titleLines.map((line, i) => (
-            <span key={line}>
+          {[t('titleLine0'), t('titleLine1')].map((line, i) => (
+            <span key={i}>
               {i > 0 ? <br /> : null}
               <ScrollRevealText as="span" className="block" fromMuted="rgba(255,255,255,0.35)">
                 {line}
@@ -65,7 +71,7 @@ export function AISection() {
         </h2>
 
         <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
-          {ai.capabilities.map((cap) => (
+          {capabilities.map((cap) => (
             <div
               key={cap.id}
               className="border border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.02)] p-6 transition-all duration-300 hover:border-[rgba(255,255,255,0.25)] hover:bg-[rgba(255,255,255,0.04)] sm:p-8"
@@ -86,7 +92,7 @@ export function AISection() {
         </div>
 
         <p className="mt-8 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-[rgba(255,255,255,0.3)] sm:mt-10 sm:text-[11px] sm:tracking-[0.2em]">
-          {ai.footerNote}
+          {t('footerNote')}
         </p>
       </div>
     </section>

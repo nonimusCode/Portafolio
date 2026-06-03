@@ -1,8 +1,8 @@
 {
   "site": {
-    "name": "JCYC",
-    "title": "Juan Camilo Yonda Conda | Senior Fullstack & AI Engineer",
-    "description": "Senior Fullstack Engineer and Applied AI Engineer based in Colombia. Specializing in cloud infrastructure, AI systems, and cutting-edge web technologies.",
+    "name": "JPCF",
+    "title": "Juan Pablo Ceron Fernandez | Senior Software Engineer",
+    "description": "Senior Full Stack Software Engineer based in Colombia. Specializing in React, Node.js, AWS cloud infrastructure, micro frontends, and AI-powered solutions.",
     "lang": "en"
   },
   "nav": {
@@ -18,15 +18,15 @@
     "toggleMenuAria": "Toggle menu"
   },
   "hero": {
-    "name": "Juan Camilo Yonda Conda",
+    "name": "Juan Pablo Ceron Fernandez",
     "titleSegments": [
-      "Senior Backend Engineer",
-      "AWS",
-      "AI Systems",
-      "Scalable Architecture"
+      "Senior Full Stack Engineer",
+      "React & Next.js",
+      "AWS & Cloud",
+      "AI Integration"
     ],
-    "paragraph1": "I build backend systems and AI-powered services on AWS that handle high-volume workloads, reduce infrastructure costs, and improve operational efficiency in real production environments.",
-    "paragraph2": "5+ years delivering microservices, APIs, and intelligent systems using Java, Node.js, Python, and modern cloud architectures.",
+    "paragraph1": "I design and build scalable full-stack solutions and enterprise platforms that solve real business problems — from micro frontends and distributed architectures to cloud infrastructure and AI-powered automation.",
+    "paragraph2": "5+ years delivering production systems with React, Node.js, TypeScript, and AWS — leading technical initiatives end-to-end, from requirements to deployment.",
     "ctaPrimary": "View Projects",
     "ctaPrimaryHref": "#projects",
     "ctaSecondary": "Contact Me",
@@ -37,12 +37,12 @@
   "about": {
     "label": "ABOUT ME",
     "headlineWords": ["BUILDING", "THE", "FUTURE"],
-    "body": "Software engineer with 5 years of experience building scalable microservices, APIs and cloud solutions. Focused on Applied AI Engineering: RAG pipelines, autonomous agents, MCP integrations and LLMOps — with emphasis on security, traceability and controlled costs.",
+    "body": "Senior Software Engineer with 5 years of experience designing and delivering scalable software across different industries. Specialized in full-stack development with a strong focus on frontend architecture, micro frontends, cloud infrastructure, and AI automation. I lead technical initiatives end-to-end — from requirements and solution design to execution and delivery — adapting fast to new challenges while maintaining quality and performance.",
     "stats": [
       { "value": "5+", "label": "Years Experience", "delay": 0 },
       { "value": "10+", "label": "Projects Delivered", "delay": 100 },
       { "value": "3", "label": "Countries Served", "delay": 200 },
-      { "value": "2", "label": "AI Systems Built", "delay": 300 }
+      { "value": "20+", "label": "Technologies", "delay": 300 }
     ]
   },
   "projects": {
@@ -72,73 +72,81 @@
     ]
   },
   "ai": {
-    "label": "APPLIED AI ENGINEERING",
+    "label": "AI ENGINEERING",
     "titleLines": ["BEYOND TRADITIONAL", "DEVELOPMENT"],
     "capabilities": [
       {
-        "id": "rag",
-        "title": "RAG PIPELINES",
-        "description": "Knowledge-intensive retrieval systems with semantic search and contextual generation"
+        "id": "automation",
+        "title": "AI AUTOMATION",
+        "description": "Business process optimization using AI models to reduce operational time and eliminate manual bottlenecks"
       },
       {
-        "id": "agents",
-        "title": "AUTONOMOUS AGENTS",
-        "description": "Multi-step reasoning with dynamic tool use and self-correcting workflows"
+        "id": "chatbots",
+        "title": "CHATBOT DEVELOPMENT",
+        "description": "Intelligent conversational tools that improve user experience and streamline internal workflows"
       },
       {
-        "id": "mcp",
-        "title": "MCP INTEGRATIONS",
-        "description": "Connecting AI models to databases, APIs and real-world enterprise tools"
+        "id": "aws-ai",
+        "title": "AWS AI SERVICES",
+        "description": "Production systems built on AWS Rekognition, Liveness Detection, and cloud-native AI for real-world security use cases"
       },
       {
-        "id": "llmops",
-        "title": "LLMOPS",
-        "description": "Production monitoring, cost optimization and full observability pipelines"
+        "id": "tooling",
+        "title": "AI-POWERED TOOLING",
+        "description": "Integrating AI assistants and copilots into engineering workflows for faster, higher-quality delivery"
       }
     ],
-    "footerNote": "Currently using Claude, Cursor and Codex as daily engineering tools"
+    "footerNote": "Currently using Claude, Cursor, and GitHub Copilot as daily engineering tools"
   },
   "experience": {
     "label": "WORK HISTORY",
     "title": "EXPERIENCE",
     "items": [
       {
-        "company": "CERTIBLOCK SAS",
-        "role": "Senior Fullstack Developer",
-        "date": "2022–Present",
-        "description": "Facial recognition, predictive models, blockchain traceability, AWS infrastructure.",
+        "company": "INTCOMEX",
+        "role": "Senior Software Engineer",
+        "date": "Jun 2025 – Present",
+        "description": "Micro frontends, enterprise architecture, AI automation, chatbot development, and end-to-end technical leadership on distributed systems. Miami, USA.",
         "current": true,
         "iconVariant": "diamond"
       },
       {
-        "company": "SENA",
-        "role": "Fullstack Developer",
-        "date": "2021–2023",
-        "description": "Led international project with Laravel, Node.js and Vue.js. Frontend team lead.",
+        "company": "CERTIBLOCK SAS",
+        "role": "Software Engineer",
+        "date": "Jan 2022 – Mar 2026",
+        "description": "AWS Rekognition facial recognition & Liveness Detection, blockchain + IPFS traceability, cloud infrastructure optimization on AWS. Medellín, Colombia.",
         "current": false,
         "iconVariant": "ring"
       },
       {
-        "company": "FUNPROTEC",
-        "role": "Programming Instructor",
-        "date": "2022–Present",
-        "description": "Teaching JavaScript, React, Node.js. AI seminars on practical tooling.",
+        "company": "QUANTUM DEVELOPERS",
+        "role": "Software Engineer",
+        "date": "Mar 2025 – Mar 2026",
+        "description": "Facial recognition with AWS Rekognition, blockchain + IPFS traceability, AWS cloud infrastructure. Part-time / Contract.",
         "current": false,
         "iconVariant": "crystal"
+      },
+      {
+        "company": "SENA",
+        "role": "Fullstack Developer",
+        "date": "Jan 2021 – Feb 2022",
+        "description": "Led international project 'Pacífico' with Laravel, Node.js and Vue.js. Built solid foundation in software development, DevOps, and Linux server administration.",
+        "current": false,
+        "iconVariant": "ring"
       }
     ]
   },
   "contact": {
     "label": "GET IN TOUCH",
     "titleLines": ["LET'S", "BUILD", "SOMETHING."],
-    "marquee": "AVAILABLE FOR WORK · SENIOR ENGINEER · AI SPECIALIST · REMOTE READY ·",
-    "email": "juanyonda100@gmail.com",
-    "emailHref": "mailto:juanyonda100@gmail.com",
+    "marquee": "AVAILABLE FOR WORK · SENIOR ENGINEER · FULL STACK · REMOTE READY ·",
+    "email": "nonimus.code@gmail.com",
+    "emailHref": "mailto:nonimus.code@gmail.com",
     "linkedinLabel": "LINKEDIN",
-    "linkedinUrl": "https://www.linkedin.com/in/juan-camilo-yonda-conda-3ab53b185/"
+    "linkedinUrl": "https://www.linkedin.com/in/juan-pablo-ce/"
   },
   "footer": {
-    "copyright": "© 2026 Juan Camilo Yonda Conda",
+    "copyright": "© 2026 Juan Pablo Ceron Fernandez",
     "credit": "Built with Next.js + Three.js"
   }
 }

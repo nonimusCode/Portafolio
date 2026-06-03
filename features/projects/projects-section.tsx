@@ -1,26 +1,33 @@
 "use client"
 
 import { ScrollRevealText } from "@/components/ui/scroll-reveal-text"
+import { useTranslations } from 'next-intl'
 import content from "@/constants/content.json"
 
-const { projects } = content
-
 export function ProjectsSection() {
+  const t = useTranslations('projects')
+
+  const projects = content.projects.items.map((item, i) => ({
+    ...item,
+    title: t(`item${i}Title`),
+    description: t(`item${i}Description`),
+  }))
+
   return (
     <section id="projects" className="section-y section-x bg-black">
       <div className="mx-auto max-w-7xl">
         <span className="block font-mono text-[10px] uppercase tracking-[0.28em] text-[rgba(255,255,255,0.38)] sm:text-[11px] sm:tracking-[0.3em]">
-          {projects.label}
+          {t('label')}
         </span>
 
         <h2 className="mt-5 font-sans text-[clamp(2.25rem,11vw,10rem)] font-semibold uppercase leading-[0.95] tracking-[-0.02em] sm:mt-6 sm:leading-none lg:text-[clamp(52px,10.8vw,160px)] mb-10 sm:mb-16">
           <ScrollRevealText as="span" className="block" fromMuted="rgba(255,255,255,0.35)">
-            {projects.title}
+            {t('title')}
           </ScrollRevealText>
         </h2>
 
         <div>
-          {projects.items.map((project, index) => {
+          {projects.map((project, index) => {
             const rowClass = `group flex flex-col gap-5 border-b border-[rgba(255,255,255,0.1)] py-7 transition-all hover:bg-[rgba(255,255,255,0.02)] sm:gap-6 sm:py-8 md:flex-row md:items-start md:gap-6 ${
               index === 0 ? "border-t border-[rgba(255,255,255,0.1)]" : ""
             } -mx-1 cursor-pointer rounded-lg px-3 no-underline outline-offset-2 sm:-mx-4 sm:px-4 focus-visible:ring-2 focus-visible:ring-white/30`

@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "title": "Juan Pablo Ceron Fernandez | Senior Software Engineer",
+    "description": "Senior Full Stack Software Engineer based in Colombia. Specializing in React, Node.js, AWS cloud infrastructure, micro frontends, and AI-powered solutions."
+  },
+  "nav": {
+    "about": "ABOUT",
+    "projects": "PROJECTS",
+    "experience": "EXPERIENCE",
+    "ai": "AI",
+    "contact": "CONTACT",
+    "cta": "Let's Talk",
+    "toggleMenu": "Toggle menu",
+    "switchLang": "ES"
+  },
+  "hero": {
+    "titleLine": "Senior Full Stack Engineer  |  React & Next.js  |  AWS & Cloud  |  AI Integration",
+    "paragraph1": "I design and build scalable full-stack solutions and enterprise platforms that solve real business problems — from micro frontends and distributed architectures to cloud infrastructure and AI-powered automation.",
+    "paragraph2": "5+ years delivering production systems with React, Node.js, TypeScript, and AWS — leading technical initiatives end-to-end, from requirements to deployment.",
+    "ctaPrimary": "View Projects",
+    "ctaSecondary": "Contact Me",
+    "scrollHint": "Scroll"
+  },
+  "about": {
+    "label": "ABOUT ME",
+    "headline0": "BUILDING",
+    "headline1": "THE",
+    "headline2": "FUTURE",
+    "body": "Senior Software Engineer with 5 years of experience designing and delivering scalable software across different industries. Specialized in full-stack development with a strong focus on frontend architecture, micro frontends, cloud infrastructure, and AI automation. I lead technical initiatives end-to-end — from requirements and solution design to execution and delivery — adapting fast to new challenges while maintaining quality and performance.",
+    "stat0Label": "Years Experience",
+    "stat1Label": "Projects Delivered",
+    "stat2Label": "Countries Served",
+    "stat3Label": "Technologies"
+  },
+  "projects": {
+    "label": "SELECTED WORK",
+    "title": "PROJECTS.",
+    "item0Title": "QUANT AI MULTI-AGENT",
+    "item0Description": "Quant research multi-agent pipeline: Claude API tool_use, yfinance ingestion, Pydantic contracts between agents, walk-forward CV, Parquet + JSON logs — Python.",
+    "item1Title": "HOUSE PRICE PREDICTOR",
+    "item1Description": "Flask web app to estimate home prices: multiple OLS regression (statsmodels), statistical analysis, 95% confidence intervals, REST API, interactive Leaflet map — Saratoga Houses dataset.",
+    "item2Title": "BLOCKCHAIN TRACEABILITY",
+    "item2Description": "Tamper-proof supply chain records using blockchain + IPFS"
+  },
+  "ai": {
+    "label": "AI ENGINEERING",
+    "titleLine0": "BEYOND TRADITIONAL",
+    "titleLine1": "DEVELOPMENT",
+    "cap0Title": "AI AUTOMATION",
+    "cap0Description": "Business process optimization using AI models to reduce operational time and eliminate manual bottlenecks",
+    "cap1Title": "CHATBOT DEVELOPMENT",
+    "cap1Description": "Intelligent conversational tools that improve user experience and streamline internal workflows",
+    "cap2Title": "AWS AI SERVICES",
+    "cap2Description": "Production systems built on AWS Rekognition, Liveness Detection, and cloud-native AI for real-world security use cases",
+    "cap3Title": "AI-POWERED TOOLING",
+    "cap3Description": "Integrating AI assistants and copilots into engineering workflows for faster, higher-quality delivery",
+    "footerNote": "Currently using Claude, Cursor, and GitHub Copilot as daily engineering tools"
+  },
+  "experience": {
+    "label": "WORK HISTORY",
+    "title": "EXPERIENCE",
+    "item0Role": "Senior Software Engineer",
+    "item0Description": "Micro frontends, enterprise architecture, AI automation, chatbot development, and end-to-end technical leadership on distributed systems. Miami, USA.",
+    "item1Role": "Software Engineer",
+    "item1Description": "AWS Rekognition facial recognition & Liveness Detection, blockchain + IPFS traceability, cloud infrastructure optimization on AWS. Medellín, Colombia.",
+    "item2Role": "Software Engineer",
+    "item2Description": "Facial recognition with AWS Rekognition & Liveness Detection, blockchain + IPFS traceability, AWS cloud infrastructure optimization. Part-time / Contract.",
+    "item3Role": "Fullstack Developer",
+    "item3Description": "Led international project 'Pacífico' with Laravel, Node.js and Vue.js. Built solid foundation in software development, DevOps, and Linux server administration."
+  },
+  "contact": {
+    "label": "GET IN TOUCH",
+    "titleLine0": "LET'S",
+    "titleLine1": "BUILD",
+    "titleLine2": "SOMETHING.",
+    "marquee": "AVAILABLE FOR WORK · SENIOR ENGINEER · FULL STACK · REMOTE READY ·",
+    "linkedinLabel": "LINKEDIN"
+  },
+  "footer": {
+    "copyright": "© 2026 Juan Pablo Ceron Fernandez",
+    "credit": "Built with Next.js + Three.js"
+  }
+}

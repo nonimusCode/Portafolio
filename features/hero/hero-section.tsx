@@ -1,7 +1,7 @@
 "use client"
 
 import dynamic from "next/dynamic"
-
+import { useTranslations } from 'next-intl'
 import content from "@/constants/content.json"
 
 const { hero } = content
@@ -24,9 +24,9 @@ const IridescentDiamond = dynamic(
   }
 )
 
-const titleLine = hero.titleSegments.join("\u00A0 | \u00A0")
-
 export function HeroSection() {
+  const t = useTranslations('hero')
+
   return (
     <section className="relative flex min-h-dvh flex-col overflow-x-hidden bg-black">
       <div className="pointer-events-none absolute inset-0 z-0">
@@ -45,14 +45,14 @@ export function HeroSection() {
             className="hero-word font-sans text-balance font-bold leading-[1.15] tracking-[-0.02em] text-left text-[#9d8bd9] sm:leading-snug"
             style={{ fontSize: "clamp(1.05rem, 4.2vw + 0.2rem, 2.5rem)" }}
           >
-            {titleLine}
+            {t('titleLine')}
           </h1>
 
           <p className="mt-6 max-w-xl font-mono text-[12px] leading-relaxed text-[rgba(255,255,255,0.45)] sm:mt-7 sm:text-[13px]">
-            {hero.paragraph1}
+            {t('paragraph1')}
           </p>
           <p className="mt-3 max-w-xl font-mono text-[12px] leading-relaxed text-[rgba(255,255,255,0.45)] sm:mt-4 sm:text-[13px]">
-            {hero.paragraph2}
+            {t('paragraph2')}
           </p>
 
           <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4">
@@ -60,13 +60,13 @@ export function HeroSection() {
               href={hero.ctaPrimaryHref}
               className="btn-gradient-hover min-h-12 content-center bg-white px-6 py-3.5 text-center font-sans text-[12px] font-bold uppercase tracking-widest text-black sm:min-h-0 sm:px-8 sm:py-4 sm:text-[13px]"
             >
-              <span>{hero.ctaPrimary}</span>
+              <span>{t('ctaPrimary')}</span>
             </a>
             <a
               href={hero.ctaSecondaryHref}
               className="min-h-12 content-center border border-[rgba(255,255,255,0.2)] px-6 py-3.5 text-center font-sans text-[12px] font-bold uppercase tracking-widest text-[rgba(255,255,255,0.85)] transition-all hover:border-white hover:text-white sm:min-h-0 sm:px-8 sm:py-4 sm:text-[13px]"
             >
-              {hero.ctaSecondary}
+              {t('ctaSecondary')}
             </a>
           </div>
         </div>
@@ -78,7 +78,7 @@ export function HeroSection() {
 
       <div className="pointer-events-none absolute bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 sm:bottom-9 sm:gap-3">
         <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[rgba(255,255,255,0.38)]">
-          {hero.scrollHint}
+          {t('scrollHint')}
         </span>
         <div className="h-8 w-px overflow-hidden bg-[rgba(255,255,255,0.2)]">
           <div className="h-full w-full bg-white scroll-line" />
