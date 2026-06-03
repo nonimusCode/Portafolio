@@ -1,0 +1,8 @@
+export { Navbar } from "./navbar"
+export { HeroSection } from "./hero"
+export { AboutSection } from "./about"
+export { ProjectsSection } from "./projects"
+export { AISection } from "./ai"
+export { ExperienceSection } from "./experience"
+export { ContactSection } from "./contact"
+export { Footer } from "./footer"

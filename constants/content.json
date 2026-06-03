@@ -1,0 +1,144 @@
+{
+  "site": {
+    "name": "JCYC",
+    "title": "Juan Camilo Yonda Conda | Senior Fullstack & AI Engineer",
+    "description": "Senior Fullstack Engineer and Applied AI Engineer based in Colombia. Specializing in cloud infrastructure, AI systems, and cutting-edge web technologies.",
+    "lang": "en"
+  },
+  "nav": {
+    "links": [
+      { "href": "#about", "label": "ABOUT" },
+      { "href": "#projects", "label": "PROJECTS" },
+      { "href": "#experience", "label": "EXPERIENCE" },
+      { "href": "#ai", "label": "AI" },
+      { "href": "#contact", "label": "CONTACT" }
+    ],
+    "ctaLabel": "Let's Talk",
+    "ctaHref": "#contact",
+    "toggleMenuAria": "Toggle menu"
+  },
+  "hero": {
+    "name": "Juan Camilo Yonda Conda",
+    "titleSegments": [
+      "Senior Backend Engineer",
+      "AWS",
+      "AI Systems",
+      "Scalable Architecture"
+    ],
+    "paragraph1": "I build backend systems and AI-powered services on AWS that handle high-volume workloads, reduce infrastructure costs, and improve operational efficiency in real production environments.",
+    "paragraph2": "5+ years delivering microservices, APIs, and intelligent systems using Java, Node.js, Python, and modern cloud architectures.",
+    "ctaPrimary": "View Projects",
+    "ctaPrimaryHref": "#projects",
+    "ctaSecondary": "Contact Me",
+    "ctaSecondaryHref": "#contact",
+    "scrollHint": "Scroll",
+    "placeholderImage": "/image.png"
+  },
+  "about": {
+    "label": "ABOUT ME",
+    "headlineWords": ["BUILDING", "THE", "FUTURE"],
+    "body": "Software engineer with 5 years of experience building scalable microservices, APIs and cloud solutions. Focused on Applied AI Engineering: RAG pipelines, autonomous agents, MCP integrations and LLMOps — with emphasis on security, traceability and controlled costs.",
+    "stats": [
+      { "value": "5+", "label": "Years Experience", "delay": 0 },
+      { "value": "10+", "label": "Projects Delivered", "delay": 100 },
+      { "value": "3", "label": "Countries Served", "delay": 200 },
+      { "value": "2", "label": "AI Systems Built", "delay": 300 }
+    ]
+  },
+  "projects": {
+    "label": "SELECTED WORK",
+    "title": "PROJECTS.",
+    "items": [
+      {
+        "number": "01",
+        "title": "QUANT AI MULTI-AGENT",
+        "description": "Quant research multi-agent pipeline: Claude API tool_use, yfinance ingestion, Pydantic contracts between agents, walk-forward CV, Parquet + JSON logs — Python.",
+        "tags": ["Python", "Claude", "Agents", "Quant"],
+        "href": "https://github.com/Juanyonda13/quant-ai-cloude"
+      },
+      {
+        "number": "02",
+        "title": "HOUSE PRICE PREDICTOR",
+        "description": "Flask web app to estimate home prices: multiple OLS regression (statsmodels), statistical analysis, 95% confidence intervals, REST API, interactive Leaflet map — Saratoga Houses dataset.",
+        "tags": ["Python", "Flask", "OLS", "Stats"],
+        "href": "https://github.com/Juanyonda13/HousePredictor"
+      },
+      {
+        "number": "03",
+        "title": "BLOCKCHAIN TRACEABILITY",
+        "description": "Tamper-proof supply chain records using blockchain + IPFS",
+        "tags": ["Blockchain", "IPFS", "Node.js", "AWS"]
+      }
+    ]
+  },
+  "ai": {
+    "label": "APPLIED AI ENGINEERING",
+    "titleLines": ["BEYOND TRADITIONAL", "DEVELOPMENT"],
+    "capabilities": [
+      {
+        "id": "rag",
+        "title": "RAG PIPELINES",
+        "description": "Knowledge-intensive retrieval systems with semantic search and contextual generation"
+      },
+      {
+        "id": "agents",
+        "title": "AUTONOMOUS AGENTS",
+        "description": "Multi-step reasoning with dynamic tool use and self-correcting workflows"
+      },
+      {
+        "id": "mcp",
+        "title": "MCP INTEGRATIONS",
+        "description": "Connecting AI models to databases, APIs and real-world enterprise tools"
+      },
+      {
+        "id": "llmops",
+        "title": "LLMOPS",
+        "description": "Production monitoring, cost optimization and full observability pipelines"
+      }
+    ],
+    "footerNote": "Currently using Claude, Cursor and Codex as daily engineering tools"
+  },
+  "experience": {
+    "label": "WORK HISTORY",
+    "title": "EXPERIENCE",
+    "items": [
+      {
+        "company": "CERTIBLOCK SAS",
+        "role": "Senior Fullstack Developer",
+        "date": "2022–Present",
+        "description": "Facial recognition, predictive models, blockchain traceability, AWS infrastructure.",
+        "current": true,
+        "iconVariant": "diamond"
+      },
+      {
+        "company": "SENA",
+        "role": "Fullstack Developer",
+        "date": "2021–2023",
+        "description": "Led international project with Laravel, Node.js and Vue.js. Frontend team lead.",
+        "current": false,
+        "iconVariant": "ring"
+      },
+      {
+        "company": "FUNPROTEC",
+        "role": "Programming Instructor",
+        "date": "2022–Present",
+        "description": "Teaching JavaScript, React, Node.js. AI seminars on practical tooling.",
+        "current": false,
+        "iconVariant": "crystal"
+      }
+    ]
+  },
+  "contact": {
+    "label": "GET IN TOUCH",
+    "titleLines": ["LET'S", "BUILD", "SOMETHING."],
+    "marquee": "AVAILABLE FOR WORK · SENIOR ENGINEER · AI SPECIALIST · REMOTE READY ·",
+    "email": "juanyonda100@gmail.com",
+    "emailHref": "mailto:juanyonda100@gmail.com",
+    "linkedinLabel": "LINKEDIN",
+    "linkedinUrl": "https://www.linkedin.com/in/juan-camilo-yonda-conda-3ab53b185/"
+  },
+  "footer": {
+    "copyright": "© 2026 Juan Camilo Yonda Conda",
+    "credit": "Built with Next.js + Three.js"
+  }
+}
